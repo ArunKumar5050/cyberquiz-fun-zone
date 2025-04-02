@@ -7,7 +7,8 @@ import {
   Award,
   User,
   Clock,
-  Star
+  Star,
+  Check
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
