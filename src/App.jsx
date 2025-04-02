@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import JSQuiz from "./pages/JSQuiz";
 import NotFound from "./pages/NotFound";
-import CategoryPage from "./pages/CategoryPage";
-import Leaderboard from "./pages/Leaderboard";
 
 const queryClient = new QueryClient();
 
@@ -21,8 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/js-quiz" element={<JSQuiz />} />
-          <Route path="/category/:slug" element={<CategoryPage />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
