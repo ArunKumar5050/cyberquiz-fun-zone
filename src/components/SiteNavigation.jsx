@@ -45,7 +45,7 @@ const SiteNavigation = () => {
                     Categories
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <ul className="grid w-[500px] gap-3 p-4 md:w-[600px] lg:w-[700px] md:grid-cols-2 lg:grid-cols-3">
                       {categories.map((category) => (
                         <li key={category.slug}>
                           <NavigationMenuLink asChild>
