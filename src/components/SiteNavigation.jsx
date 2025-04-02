@@ -12,10 +12,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Brain, Trophy, Book, Home } from "lucide-react";
+import { Brain, Trophy, Book, Home, Menu } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SiteNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <div className="border-b border-cyber-blue/20 bg-cyber-darker">
@@ -40,8 +42,8 @@ const SiteNavigation = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>
-                    <Book className="mr-2 h-4 w-4" />
+                  <NavigationMenuTrigger className="gap-2">
+                    <Book className="h-4 w-4" />
                     Categories
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -88,6 +90,7 @@ const SiteNavigation = () => {
               className="border-cyber-blue/30 text-cyber-blue"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
+              <Menu className="h-5 w-5 mr-2" />
               Menu
             </Button>
           </div>
